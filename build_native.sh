@@ -31,3 +31,11 @@ rm -rf bin/austindonisan
 mkdir -p bin/austindonisan/aot
 gcc -o ./bin/austindonisan/aot/1brc ./src/austindonisan/1brc.c -Wall -Werror -Wno-unused-parameter -std=c17 -march=native -mtune=native -Ofast
 echo "Built austindonisan's repo"
+
+# dzaima
+rm -rf bin/dzaima
+mkdir -p bin/dzaima/aot
+make -C src/dzaima clean
+make -C src/dzaima a.out CC=gcc GCC=g++
+mv src/dzaima/a.out bin/dzaima/aot/1brc
+echo "Built dzaima's repo"
